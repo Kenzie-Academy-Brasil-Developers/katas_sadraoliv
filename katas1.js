@@ -14,11 +14,13 @@ function divisiblesFor(limite, divisor) {
     }
 }
 divisiblesFor(50, 2)
+
 //exercicio3
 function stringElement(string, numero) {
   for (i = 0; i <= string.length; i++) {
-    console.log(string[numero].toUpperCase())
+   
   }
+  console.log(string[numero].toUpperCase())
 }
 stringElement("eletrodomestico", 2)
 //exercicio4
@@ -79,7 +81,7 @@ countTextOccurrences("eletronica", "e")
 
 function textBackwards(string) {
   let textContrario = ""
-  for (let i = string.length - 1; i > 0; i--) {
+  for (let i = string.length - 1; i >=0; i--) {
     textContrario += string[i]
   }
   console.log(textContrario);
@@ -104,22 +106,32 @@ function encryptText(string) {
 
     if (string[i] == "a") {
       novaFrase1 += "x"
+    }else if(string[i]=="A"){
+      novaFrase1 +="X"
     } else if (string[i] == "e") {
       novaFrase1 += "y"
-    } else if (string[i] == "i") {
+    }else if(string[i]=="E"){
+      novaFrase1 +="Y"
+    }else if (string[i] == "i") {
       novaFrase1 += "w"
+    }else if(string[i]=="I"){
+    novaFrase1+="W"
     } else if (string[i] == "o") {
       novaFrase1 += "k"
+    }else if(string[i]=="O"){
+      novaFrase1+="K"
     } else if (string[i] == "u") {
       novaFrase1 += "z"
-
-
-    } else
+    }else if(string[i]=="U"){
+      novaFrase1+="Z"
+    }else{
+  
       novaFrase1 += string[i]
+     }
+    }
 
-  }
   console.log(novaFrase1);
-}
+  }
 
 encryptText("O rato roeu a roupa do rei de Roma")
 
